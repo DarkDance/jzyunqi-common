@@ -1,5 +1,5 @@
 # jzyunqi-common
-> jzyunqi-common
+> a common utils package for yq-framework-dubbo / yq-framework-cloud / yq-framework-boot
 
 
 ## install:

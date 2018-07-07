@@ -22,7 +22,5 @@
 </dependency>
 ```
 
-3. Maven install:
-```shell
-mvn install
-```
+## resources:
++ https://jitpack.io/

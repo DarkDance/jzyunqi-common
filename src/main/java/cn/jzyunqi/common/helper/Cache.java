@@ -1,10 +1,12 @@
 package cn.jzyunqi.common.helper;
 
+import java.io.Serializable;
+
 /**
  * @author wiiyaya
  * @date 2018/5/21.
  */
-public interface Cache {
+public interface Cache extends Serializable {
 
     CacheType getType();
 

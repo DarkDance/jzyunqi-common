@@ -41,6 +41,10 @@ public class DigestUtilPlus {
         public static String sign(String content) {
             return DigestUtils.md5Hex(content);
         }
+
+        public static byte[] sign(byte[] content) {
+            return DigestUtils.md5(content);
+        }
     }
 
     /**
@@ -66,6 +70,16 @@ public class DigestUtilPlus {
 
     /**
      * 对称加密算法：AES
+     * PS: 因为某些国家的进口管制限制，Java发布的运行环境包中的加解密有一定的限制。默认不允许256位密钥的AES加解密，解决方法就是修改策略文件。
+     * 官方网站提供了JCE无限制权限策略文件的下载：
+     *   JDK6的下载地址：
+     *   http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html
+     *
+     *   JDK7的下载地址：
+     *   http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
+     *
+     *   JDK8的下载地址：
+     *   http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
      */
     public static class AES{
         static {

@@ -94,7 +94,7 @@ public abstract class AliBaseHelper {
      * @throws Exception 异常
      */
     String ossSign(String stringToSign) throws Exception {
-        return DigestUtilPlus.HmacSHA1.sign(accessKeySecret, stringToSign);
+        return DigestUtilPlus.HmacSHA1.sign(stringToSign, accessKeySecret);
     }
 
     /**
@@ -105,7 +105,7 @@ public abstract class AliBaseHelper {
      * @throws Exception 异常
      */
     private String popSign(String stringToSign) throws Exception {
-        return DigestUtilPlus.HmacSHA1.sign(accessKeySecret + "&", "GET&%2F&" + stringToSign);
+        return DigestUtilPlus.HmacSHA1.sign("GET&%2F&" + stringToSign, accessKeySecret + "&");
     }
 
     /**

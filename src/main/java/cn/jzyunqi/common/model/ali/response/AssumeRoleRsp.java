@@ -54,7 +54,7 @@ public class AssumeRoleRsp extends AliYunBaseRsp {
          * 失效时间
          */
         @JsonProperty("Expiration")
-        @JsonFormat(locale = "en", timezone = "GMT+0", pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")//阿里返回的是伦敦时间
+        @JsonFormat(locale = "en", timezone = "GMT+0", pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")//阿里返回的是UTC/GMT时间
         private LocalDateTime expiration;
 
     }

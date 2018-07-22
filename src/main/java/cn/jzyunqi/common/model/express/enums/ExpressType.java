@@ -17,6 +17,11 @@ public enum ExpressType {
     KDNIAO("http://www.kdniao.com/JSInvoke/MSearchResult.aspx?expCode=%s&expNo=%s"),
 
     /**
+     * 快递100
+     */
+    KD100("https://m.kuaidi100.com/index_all.html?type=%s&postid=%s"),
+
+    /**
      * 顺丰
      */
     SF("http://www.sf-express.com/mobile/cn/sc/dynamic_function/waybill/waybill_query_info.html?billno=%s&mediaSource=MOBILE.OWF"),;

@@ -386,7 +386,7 @@ public class GlobalExceptionHandler {// extends ResponseEntityExceptionHandleré‡
         log.error("======request header : {}======", requestHeader);
         log.error("======request param : {}======", request.getParameterMap());
         log.error("======Global error catch: statusCode[{}], errorCode[{}], errorMessage[{}], errorUrl[{}], currUserId[{}]======"
-                , HttpStatus.INTERNAL_SERVER_ERROR.value()
+                , status
                 , restResultDto.getErrorCode()
                 , restResultDto.getErrorMessage()
                 , httpServletRequest.getRequestURI()

@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * @author wiiyaya
  * @date 2018/5/3
  */
-public final class StringUtilPlus extends StringUtils {
+public class StringUtilPlus extends StringUtils {
 
     public static final String PERCENT = "%";
     public static final String SLASH = "/";//back slash\
@@ -24,11 +24,6 @@ public final class StringUtilPlus extends StringUtils {
     public static final String R_PT = ")";
     public static final String ENTER = "\n";
     public static final String REGEX_LAST_COMMA = ",$";
-
-    private StringUtilPlus() {
-
-    }
-
 
     public static String defaultString(final Number num) {
         return num == null ? EMPTY : defaultString(num.toString());
@@ -143,49 +138,6 @@ public final class StringUtilPlus extends StringUtils {
         } else {
             return input;
         }
-    }
-
-    /**
-     * 星号替换身份证号
-     *
-     * @param idCard 身份证号
-     * @return 结果
-     */
-    public static String idCardReplaceWithStar(String idCard) {
-
-        if (idCard == null || idCard.isEmpty()) {
-            return null;
-        } else {
-            return idCard.replaceAll("(?<=\\d{3})\\d(?=\\d{2})", "*");
-        }
-    }
-
-
-    /**
-     * 星号替换中文姓名
-     *
-     * @param userName 姓名
-     * @return 替换结果
-     */
-    public static String payPwdNameReplaceWithStar(String userName) {
-        if (userName == null) {
-            userName = "";
-        }
-        StringBuilder builder = new StringBuilder();
-        int nameLength = userName.length();
-        if (nameLength == 1) {
-            return userName;
-        } else if (nameLength == 2) {
-            builder.append(userName.substring(0, 1)).append("*");
-        } else if (nameLength >= 3) {
-            builder.append(userName.substring(0, 1));
-            for (int i = 0; i < nameLength - 2; i++) {
-                builder.append("*");
-            }
-            builder.append(userName.substring(nameLength - 1, nameLength));
-        }
-        return builder.toString();
-
     }
 
     /**
